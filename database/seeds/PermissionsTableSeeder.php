@@ -36,7 +36,7 @@ class PermissionsTableSeeder extends Seeder
 
         //Roles
         Permission::create([
-            'name' => 'Navegar rproductosoles',
+            'name' => 'Navegar roles',
             'slug' => 'roles.index',
             'description' => 'Lista y navega todos los rol del sistema'
         ]);  
@@ -64,27 +64,27 @@ class PermissionsTableSeeder extends Seeder
         //Roles
         Permission::create([
             'name' => 'Navegar productos',
-            'slug' => 'productos.index',
+            'slug' => 'products.index',
             'description' => 'Lista y navega todos los rol del sistema'
         ]);  
         Permission::create([
             'name' => 'Ver detalles de producto',
-            'slug' => 'productos.show',
+            'slug' => 'products.show',
             'description' => 'Ver en detalle cada rol del sistema'
         ]); 
         Permission::create([
             'name' => 'Creación de productos',
-            'slug' => 'productos.create',
+            'slug' => 'products.create',
             'description' => 'Crear producto del sistema'
         ]);  
         Permission::create([
             'name' => 'Edición productos',
-            'slug' => 'productos.edit',
+            'slug' => 'products.edit',
             'description' => 'Editar cualquier dato de un producto del sistema'
         ]);  
         Permission::create([
             'name' => 'Eliminar productos',
-            'slug' => 'productos.destroy',
+            'slug' => 'products.destroy',
             'description' => 'Eliminar cualquier producto del sistema'
         ]);
     }
