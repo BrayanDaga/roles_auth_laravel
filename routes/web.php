@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::delete('roles/store','RoleController@destroy')->name('roles.destroy')
     ->middleware('permission::roles.create');
-    
+
     Route::get('roles/{role}/edit','RoleController@edit')->name('roles.edit')
     ->middleware('permission::roles.edit');
 
@@ -62,24 +62,24 @@ Route::middleware(['auth'])->group(function(){
 
     Route::delete('products/store','ProductController@destroy')->name('products.destroy')
     ->middleware('permission::products.create');
-    
+
     Route::get('products/{product}/edit','ProductController@edit')->name('products.edit')
     ->middleware('permission::products.edit');
-    
+
       //Users
     Route::get('users','UserController@index')->name('users.index')
     ->middleware('permission::users.index');
-  
+
     Route::put('users/{role}','UserController@update')->name('users.uptade')
     ->middleware('permission::users.edit');
-  
+
     Route::get('users/{role}','UserController@show')->name('users.show')
     ->middleware('permission::users.show');
-  
+
     Route::delete('users/store','UserController@destroy')->name('users.destroy')
     ->middleware('permission::users.create');
-      
+
     Route::get('users/{role}/edit','UserController@edit')->name('users.edit')
     ->middleware('permission::users.edit');
-      
+
 });
