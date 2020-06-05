@@ -16,11 +16,11 @@
             <li>
                 <label>
                     <input type="checkbox" name="roles[]" value="{{ $role->id }}"
-                    @foreach ($user->roles as $rolUser)
-                    @if ($rolUser->id == $role->id)
-                      checked
+
+                    @if(isset($assignedRole))
+                    {{in_array($role->id,$assignedRole) ? 'checked':''}}
                     @endif
-                    @endforeach
+
                     >
                     {{ $role->name }}
                     <em>({{ $role->description }})</em>

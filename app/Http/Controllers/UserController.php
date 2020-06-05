@@ -43,8 +43,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $roles = Role::get();
-
-        return view('users.edit', compact('user', 'roles'));
+        $assignedRole = $user->roles->pluck('id')->toArray();
+        return view('users.edit', compact('user', 'roles','assignedRole'));
     }
 
     /**
